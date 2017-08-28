@@ -1,0 +1,36 @@
+
+<h1 style="text-align: center;">----------      [    ANGULAR 2 SHOP MANAGEMENT APP   ]   ----------</h1>
+<div style="width:220px; float:right; margin-right:5%;">
+	<!-- <form class="form-group" style="float:right;width: 280px; background-color: #d3d4d5;padding: 5px; margin-right: 20px;" novalidate="" action=""> -->
+	<h1>Add Product</h1>
+	<p><label>Product Bar Code : </label><input type="text" name="" placeholder="enter Bar Code" class="form-control" [(ngModel)] = "productEntry.pdt_id" required>
+
+	<p><label>Product Name : </label><input type="text" name="" placeholder="enter name" class="form-control" [(ngModel)] = "productEntry.pdt_name" required>
+
+	<label>Product price :</label><input type="text" name="" placeholder="enter price" class="form-control" [(ngModel)] = "productEntry.pdt_price" required></p>
+
+	<p><label>Product Availability : </label><input type="text" name="" placeholder="enter Availibility" class="form-control" [(ngModel)] = "productEntry.pdt_avail" required>
+
+	<label>Product Quantity : </label><input type="text" name="" placeholder="enter Quantity" class="form-control" [(ngModel)] = "productEntry.pdt_quantty" required></p>
+
+	<p><label>Product Discount : </label><input type="text" name="" placeholder="enter Discount Detail" class="form-control" [(ngModel)] = "productEntry.pdt_discount" required></p>
+
+	<button class="btn btn-default" (click)="addNewPdt();">Add New Product</button>
+	<button class="btn btn-success" (click) = "updatePdt()">Update</button>
+</div>
+<!-- </form> -->
+<div style="float: left;width: 80%;">
+	<h1>All Products List</h1>
+	<table class="table table-bordered">
+		<thead>
+			<th>Product Bar Code</th><th>Product Name </th><th>Product price</th><th>Product Availability</th><th>Product Quantity</th><th>Discount</th><th>Manage Product</th>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let x of productList">
+				<td>{{x.pdt_id}}</td><td>{{x.pdt_name}}</td><td>{{x.pdt_price}}</td><td>{{x.pdt_avail}}</td><td>{{x.pdt_quantty}}</td><td>{{x.pdt_discount}}<ul ><li *ngFor = "let y of productList.pdt_detail">{{y.discount_lstdate}}</li></ul></td>
+				<td><button class="btn btn-primary" (click)="editPdt(x)">Edit</button>&nbsp;&nbsp;
+				<button class="btn btn-info" (click) ="deletePdt(x)">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
