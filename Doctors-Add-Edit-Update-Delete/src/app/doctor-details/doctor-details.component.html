@@ -1,0 +1,33 @@
+
+<h1 style="text-align: center;">----------      [    ANGULAR 2 DOCTOR APONITMENT APP   ]   ----------</h1>
+<div style="width:220px; float:right; margin-right:5%;">
+	<!-- <form class="form-group" style="float:right;width: 280px; background-color: #d3d4d5;padding: 5px; margin-right: 20px;" novalidate="" action=""> -->
+	<h1>Add Doctor</h1>
+	<p><label>Docotr ID : </label><input type="text" name="" placeholder="enter Doc Id" class="form-control" [(ngModel)] = "doctorEntry.doc_id" required>
+
+	<p><label>Doctor Name : </label><input type="text" name="" placeholder="enter name" class="form-control" [(ngModel)] = "doctorEntry.doc_name" required>
+
+	<label>Doctor Speciality :</label><input type="text" name="" placeholder="enter Speciality" class="form-control" [(ngModel)] = "doctorEntry.doc_spec" required></p>
+
+	<p><label>Doctor Salary :</label><input type="text" name="" placeholder="enter Salary" class="form-control" [(ngModel)] = "doctorEntry.doc_sal" required>
+	<br>
+	<button class="btn btn-default" (click)="addNewDoc();">Add New Product</button>
+	<button class="btn btn-success" (click) = "updateDoc()">Update</button>
+</div>
+<!-- </form> -->
+<div style="float: left;width: 80%;">
+	<h1>All Products List</h1>
+	<table class="table table-bordered">
+		<thead>
+			<th>Doctor ID</th><th>Doctor Name </th><th>Doctor Speciality</th><th>Doctor Salary</th><th>Manage Record</th>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let x of doctorList">
+				<td>{{x.doc_id}}</td><td>{{x.doc_name}}</td><td>{{x.doc_spec}}</td><td>{{x.doc_sal}}</td>
+				<td><button class="btn btn-primary" (click)="editDoc(x)">Edit</button>&nbsp;&nbsp;
+				<button class="btn btn-info" (click) ="deleteDoc(x)">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div></div>
