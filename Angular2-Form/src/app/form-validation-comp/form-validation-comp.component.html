@@ -1,0 +1,13 @@
+<p>
+  form-validation-comp works!
+</p>
+<form name="frm" #f="ngForm"><!-- #  is a variable that stores the reference of Form -->
+	<p>
+		username :<input ngModel name =" username">
+	</p>
+	<p>
+		password :<input  ngModel name="pass" type="password">
+	</p>
+	<button (click)="save(f)">Save Form Data</button>
+	<button (click)="save2()">Save Form Data 2</button>
+</form>
