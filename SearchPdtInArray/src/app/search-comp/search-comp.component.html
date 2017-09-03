@@ -1,0 +1,13 @@
+<p>
+  search-comp works!
+</p>
+<p>
+	<input  [(ngModel)] ="key">
+</p>
+<p>
+	{{products | search : key | json}}
+</p>
+
+<p>
+	{{products | limit : search}}
+</p>
