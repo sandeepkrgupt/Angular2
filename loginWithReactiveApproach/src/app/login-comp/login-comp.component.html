@@ -1,0 +1,25 @@
+
+<form [formGroup] = "userSignup"> 
+	<p>
+		 name :<input formControlName ="unm">
+		 <span *ngIf="userSignup.get('unm').errors">
+		 	<span *ngIf="userSignup.get('unm').errors['required']">required</span>
+		 	<span *ngIf="userSignup.get('unm').errors['pattern']">onlyu character Allowed</span>
+		 </span>
+	</p>
+	<p>
+		Email : <input formControlName ="uem">
+	</p>
+	<p>
+		Mobile No. : <input formControlName ="uctc">
+	</p>
+	<p>
+		address : <textarea rows="4" cols="20" formControlName ="uaddr">
+			
+		</textarea>
+	</p>
+	<p>
+		<button type="submit" (click)="checklogin()">Add</button>
+	</p>
+	
+</form>
