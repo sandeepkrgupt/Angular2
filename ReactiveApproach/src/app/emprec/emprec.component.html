@@ -1,0 +1,23 @@
+<p>
+  emprec works!
+</p>
+<form [formGroup] = "empRec"> // property binding
+	<p>
+		fst name :<input formControlName ="fn">
+	</p>
+	<p>
+		lst name. : <input formControlName ="ln">
+	</p>
+	<p>
+		sal : <input formControlName ="sal">
+	</p>
+	<p>
+		<button type="submit" (click)="addrec()">Add</button>
+	</p>
+	<table>
+		<th>fn</th><th>ln</th><th>sal</th>
+		<tr *ngFor = "let x of emp">
+			<td>{{x.fn}}</td><td>{{x.ln}}</td><td>{{x.sal}}</td>
+		</tr>
+	</table>
+</form>

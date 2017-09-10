@@ -1,0 +1,30 @@
+<p>
+  doctors works!
+</p>
+
+<p>
+  emprec works!
+</p>
+<form [formGroup] = "docrec"> 
+	<p>
+		Doc ID :<input formControlName ="DId">
+	</p>
+	<p>
+		DOc Name. : <input formControlName ="DNm">
+	</p>
+	<p>
+		Doc sal : <input formControlName ="DSal">
+	</p>
+	<p>
+		Doc Spec : <input formControlName ="DSpec">
+	</p>
+	<p>
+		<button type="submit" (click)="recadd()">Add</button>
+	</p>
+	<table>
+		<th>ID</th><th>Doc Name</th><th>Doc Sal</th><th>Doc Spec</th><th>Edit</th><th>Delete</th>
+		<tr *ngFor = "let x of Doc">
+			<td>{{x.Id}}</td><td>{{x.DNm}}</td><td>{{x.DSal}}</td><td>x.DSpec</td><td><button (click)="edit()">Edit</button></td><td><button (click)="delete()">Delete</button></td>
+		</tr>
+	</table>
+</form>
