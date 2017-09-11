@@ -11,7 +11,7 @@
 -----------------------------------------------------------------------------------------------------------------
 6. When we create custom services we need to import them at two Places - 
 i. - > in app.module 
-import {NewServiceName} from './serviveFolderName/serviceFileName.serve;
+import {NewServiceName} from './serviveFolderName/serviceFileName.service;
 then call your New Service inside Prodivers: [] Array.
 NOTE - ALWAYS SAVE SERVICE FILE AS filename.service.ts to easily identify service file and keep it inside service Folder.
 
