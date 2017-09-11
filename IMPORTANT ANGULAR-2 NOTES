@@ -28,7 +28,7 @@ In your common service file you need to create constructor inside one class and 
 	   }
     HERE empSalDA AND empSalTA ARE TWO CUSTUM SERVICES.
 FOR USING ONE OR MORE SERVICE INSIDE ANOTHER SERVICE WE NEED TO Import {Injectable} form '@angular/core' AND CALL @Injectable() Decorator.
-USE MUST NOT USE ; AFTER @Injectable() code. Like - @Injectable(); is wrong.
+YOU MUST NOT USE ; AFTER @Injectable() code. Like - @Injectable(); is wrong.
 -----------------------------------------------------------------------------------------------------------------
 8. CONSTRUCTOR -  Every class which is having it's own object is known as constructor or in other words , A constructor is a special 
 method of a class that initializes objects of its own type.
