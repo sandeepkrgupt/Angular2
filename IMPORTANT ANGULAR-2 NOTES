@@ -3,7 +3,7 @@
 
 2. Angular Properties must always binds with names starting with camel case i.e starting letter must be small.
 
-3. All Modules wihich we are importing in app.module must also call or add in import[] array.
+3. All Modules which we are importing in app.module must also call or add in import[] array.
 
 4. For using Form tag and Form Controls we must need to import {FormsModule} from '@angular/forms' and call inside import[].
 
