@@ -33,7 +33,7 @@ YOU MUST NOT USE ; AFTER @Injectable() code. Like - @Injectable(); is wrong.
 8. CONSTRUCTOR -  Every class which is having it's own object is known as constructor or in other words , A constructor is a special 
 method of a class that initializes objects of its own type.
 -----------------------------------------------------------------------------------------------------------------
-9. 'this' operator is used to access the object of the class itself. 
+9. 'this' operator is used to access the members of it's own class or the class itself. 
 -----------------------------------------------------------------------------------------------------------------
 10. When we create Service, object automatically gets created, so we need access the data using this operator
 -----------------------------------------------------------------------------------------------------------------
