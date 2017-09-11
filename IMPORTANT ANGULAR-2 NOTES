@@ -8,3 +8,26 @@
 4. For using Form tag and Form Controls we must need to import {FormsModule} from '@angular/forms' and call inside import[].
 
 5. All Names starting with @ sign are called Decorators. Decorators contains the reference of any Class.
+
+6. When we create custom services we need to import them at two Places - 
+i. - > in app.module 
+import {NewServiceName} from './serviveFolderName/serviceFileName.serve;
+then call your New Service inside Prodivers: [] Array.
+NOTE - ALWAYS SAVE SERVICE FILE AS filename.service.ts to easily identify service file and keep it inside service Folder.
+
+ii. - > Then you also need to import in component.ts file
+import {NewServiceName} from '../serviceFolderName/filename;
+Then you need to store these services inside variable in constructor() function like this - 
+constructor(private var_name : NewServiceName) {}
+
+7. If you are creating multiple services and want to use them in one common service that you have created then you need to import them all 
+inside that common service file and YOU ONLY NEED TO IMPORT THAT COMMOM SERVICE FILE INSIDE component.ts file.
+
+8. CONSTRUCTOR -  Every class which is having it's own object is known as constructor or in other wors , A constructor is a special method of a class that
+is initializes objects of its own type.
+
+9. 'thi's operator is used to access the object of class itself. 
+
+10. When we create Service object automatically gets created, so we need access the data members using this operator
+
+11. In Factory we need to create object like - > var Obj = {};
