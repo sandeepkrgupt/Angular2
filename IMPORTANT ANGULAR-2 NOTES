@@ -1,0 +1,9 @@
+1.  Properities i.e names inside  []  always starts from lower letter like [formGroup] but not [FormGroup].
+
+2. Angular Properties must always binds with names starting with camel case i.e starting letter must be small.
+
+3. All Modules wihich we are importing in app.module must also call or add in import[] array.
+
+4. For using Form tag and Form Controls we must need to import {FormsModule} from '@angular/forms' and call inside import[].
+
+5. All Names starting with @ sign are called Decorators. Decorators contains the reference of any Class.
