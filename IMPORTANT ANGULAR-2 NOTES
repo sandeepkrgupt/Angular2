@@ -1,3 +1,4 @@
+
 1.  Properities i.e names inside  []  always starts from lower letter like [formGroup] but not [FormGroup].
 
 2. Angular Properties must always binds with names starting with camel case i.e starting letter must be small.
