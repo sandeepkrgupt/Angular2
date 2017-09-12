@@ -36,13 +36,13 @@ method of a class that initializes objects of its own type.
 -----------------------------------------------------------------------------------------------------------------
 9. 'this' operator is used to access the members of it's own class or the class itself. 
 -----------------------------------------------------------------------------------------------------------------
-10. When we create Service, object automatically gets created, so we need access the data using this operator
+10. When we create Service, object automatically gets created, so we need access the data using 'this' operator
 -----------------------------------------------------------------------------------------------------------------
 11. In Factory we need to create object like - > var Obj = {} manually.
 -----------------------------------------------------------------------------------------------------------------
 12.In Angular 2 Filters are known as Pipes - 
    For Creating our own Pipe we need to do Following - >
-   import {Pipe, PipeTransform} form '@angular/core';
+   import {Pipe, PipeTransform} from '@angular/core';
    @Pipe({name : 'pipe_Variable_name'}) (Don't use ; Here)
    export class Class_Name implements PipeTransform(){
      transform(any_variable : dataType){  // Here transform is constructor of PipeTransform Interface.
