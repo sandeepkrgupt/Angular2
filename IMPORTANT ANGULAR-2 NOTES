@@ -58,6 +58,8 @@ method of a class that initializes objects of its own type.
       private val : number = 23;
     }
    And Second Variable is the pipe.
+   
+DATE - 13/09/2017
 -----------------------------------------------------------------------------------------------------------------
 13. IT IS IMPORTANT TO IMPORT 'FormsModule' AND CALL IT INSIDE Import[] IF WE ARE USING FORM AND FORM CONTROLS.
 -----------------------------------------------------------------------------------------------------------------
