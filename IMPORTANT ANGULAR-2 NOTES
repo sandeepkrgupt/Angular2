@@ -59,4 +59,31 @@ method of a class that initializes objects of its own type.
     }
    And Second Variable is the pipe.
 -----------------------------------------------------------------------------------------------------------------
-13. 
+13. IT IS IMPORTANT TO IMPORT 'FormsModule' AND CALL IT INSIDE Import[] IF WE ARE USING FORM AND FORM CONTROLS.
+-----------------------------------------------------------------------------------------------------------------
+14.  FORMS WITH TEMPLATE BASED APPROACH --- >
+For this follow these Steps -
+i -> In app.module 
+import {FormsModule} from '@angular/forms';
+
+ii -> in component.ts
+import {ViewChild} from '@angular/core';
+import {NgForm} from '@angular/forms';
+Then craete one variable of ViewChild of type NgForm Like -
+export class CopmComponent implements OnInit {
+	@ViewChild('myFrm') login_dtl : NgForm;
+	  constructor() { }
+	  ngOnInit() { }
+	}
+
+iii -> In your HTML file make the reference of your form and bind input fields with ngModel Like -
+	<form #myFrm = "ngForm">
+		Name : <input type="text" name="fstname" ngModel >
+		mobile : <input type="number" name="number" ngModel>
+		<button (click)="add()">Add</button>
+	</form>
+iv - > In your add function call the reference variable like -
+	add(){
+		console.log(this.logdtl);
+	}
+-----------------------------------------------------------------------------------------------------------------
