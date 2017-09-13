@@ -86,6 +86,6 @@ iii -> In your HTML file make the reference of your form and bind input fields w
 	</form>
 iv - > In your add function call the reference variable like -
 	add(){
-		console.log(this.logdtl);
+		console.log(this.login_dtl);
 	}
 -----------------------------------------------------------------------------------------------------------------
