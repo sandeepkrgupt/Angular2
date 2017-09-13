@@ -27,7 +27,7 @@ In your common service file you need to create constructor inside one class and 
     export class GrossSalary{
 	       constructor(private varda : empSalDA, private varta : empSalTA){
 	   }
-    HERE empSalDA AND empSalTA ARE TWO CUSTUM SERVICES.
+    HERE empSalDA AND empSalTA ARE TWO MORE SERVICES.
 FOR USING ONE OR MORE SERVICE INSIDE ANOTHER SERVICE WE NEED TO Import {Injectable} from '@angular/core' AND CALL @Injectable() Decorator.
 YOU MUST NOT USE ; AFTER @Injectable() code. Like - @Injectable(); is wrong.
 -----------------------------------------------------------------------------------------------------------------
