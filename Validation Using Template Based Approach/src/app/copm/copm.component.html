@@ -1,0 +1,50 @@
+<h1>
+  FORM VALIDATION USING TEMPLATE BASED APPROACH
+</h1>
+<br>
+
+<form #myFrm = "ngForm" (ngSubmit)="add();" class="form-group">
+	<label>Name : 
+		<!-- Field Validation -->
+		<span *ngIf="fstname.errors" style="color:red;">
+			<span *ngIf="fstname.touched && !fstname.valid">Enter Name</span>
+			<span *ngIf="fstname.errors && fstname.errors.pattern"> | Only Characters</span>
+		</span>
+		<!-- End -->
+		<input type="text" name="fstname" ngModel #fstname="ngModel" required class="form-control" pattern="^([a-zA-Z]|\s)*$">
+	</label>
+	<br>
+
+	<label>mobile : 
+		<!-- Field Validation -->
+		<span *ngIf="number.errors" style="color: red;">
+			<span *ngIf="number.touched && !number.valid">Enter Number</span>
+			<span *ngIf="number.touched && number.errors && number.errors.pattern"> | Not a Number Or Valid 10 digit Number</span>
+		</span>
+		<!-- End -->
+		<input type="text" name="number" ngModel #number="ngModel" required class="form-control" pattern="[0-9]{10}">
+	</label>
+	<br>
+
+	<label>E-Mail : 
+		<!-- Field Validation -->
+		<span *ngIf="email.errors" style="color:red;">
+			<span *ngIf="email.touched && !email.valid">Enter email</span>
+			<span *ngIf="email.errors && email.errors.pattern">  | Email is invalid</span>
+		</span>
+		<!-- End -->
+		<input type="email" name="email" ngModel #email="ngModel" required class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+	</label>
+	<br>
+
+	<button type="submit" value="submit" class="btn btn-info">Add</button>
+</form>
+<br>
+
+<h1>Showing Records</h1>
+<table class="table">
+	<th>Name</th><th>Mobile</th><th>Email</th>
+	<tr *ngFor="let x of newusr">
+		<td>{{x.fstname}}</td><td>{{x.number}}</td><td>{{x.email}}</td>
+	</tr>
+</table>
