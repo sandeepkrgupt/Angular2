@@ -103,6 +103,7 @@ v -> For Validations Follow These Steps -
 	<br>
 	<button type="submit" value="submit" class="btn btn-info">Add</button>
 </form>
+NOTE : - INPUT NAME (name=" ") AND REFERENCE NAME (#ref_name) BOTH MUST BE SAME LIKE - name="email"    #email="ngModel"
 -----------------------------------------------------------------------------------------------------------------
 15. For Pushing form data into array we need to do following  -
 @ViewChild('myFrm') ctc_dtl : NgForm;
@@ -112,4 +113,4 @@ add(){
 }
 where 
 private newusr : any [] = [{}];  //  Empty Array , you can put some value if you want ...
-NOTE : - INPUT NAME (name=" ") AND REFERENCE NAME (#ref_name) BOTH MUST BE SAME LIKE - name="email"    #email="ngModel"
+
