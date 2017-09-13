@@ -88,4 +88,27 @@ iv - > In your add function call the reference variable like -
 	add(){
 		console.log(this.login_dtl);
 	}
+	
+v -> For Validations Follow These Steps -
+<form #myFrm = "ngForm" (ngSubmit)="add();" class="form-group">
+	<label>E-Mail : 
+		<!-- Field Validation -->
+		<span *ngIf="email.errors" style="color:red;">
+			<span *ngIf="email.touched && !email.valid">Enter email</span>
+			<span *ngIf="email.errors && email.errors.pattern">  | Email is invalid</span>
+		</span>
+		<!-- End -->
+		<input type="email" name="email" ngModel #email="ngModel" required class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+	</label>
+	<br>
+	<button type="submit" value="submit" class="btn btn-info">Add</button>
+</form>
 -----------------------------------------------------------------------------------------------------------------
+15. For Pushing form data into array we need to do following in our function -
+@ViewChild('myFrm') ctc_dtl : NgForm;
+add(){
+	var x = this.newusr.push({email : this.ctc_dtl.value.email});
+	return x;
+}
+where newusr is 
+private newusr : any [] = [{}];  //  Empty Array , you can put some value if you want ...
