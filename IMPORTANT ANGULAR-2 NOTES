@@ -1,10 +1,11 @@
-DATE - 11/09/2017
 MAIN NOTE -
 Angular2, the core concepts are -
 components
 dependency injection
 binding
 *****************************************************************************************************************
+
+DATE - 11/09/2017
 1.  Properities i.e names inside  []  always starts from lower letter like [formGroup] but not [FormGroup].
 -----------------------------------------------------------------------------------------------------------------
 2. Angular Properties must always binds with names starting with camel case i.e starting letter must be small.
