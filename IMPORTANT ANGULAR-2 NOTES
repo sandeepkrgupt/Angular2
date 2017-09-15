@@ -5,7 +5,7 @@ dependency injection
 binding
 *****************************************************************************************************************
 
-DATE - 11/09/2017
+**DATE - 11/09/2017
 1.  Properities i.e names inside  []  always starts from lower letter like [formGroup] but not [FormGroup].
 -----------------------------------------------------------------------------------------------------------------
 2. Angular Properties must always binds with names starting with camel case i.e starting letter must be small.
@@ -65,7 +65,7 @@ method of a class that initializes objects of its own type.
     }
    And Second argument is the pipe.
    
-DATE - 13/09/2017
+**DATE - 13/09/2017
 -----------------------------------------------------------------------------------------------------------------
 13. IT IS IMPORTANT TO IMPORT 'FormsModule' AND CALL IT INSIDE Import[] IF WE ARE USING FORM AND FORM CONTROLS.
 -----------------------------------------------------------------------------------------------------------------
