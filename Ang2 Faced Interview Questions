@@ -1,0 +1,114 @@
+IBM
+
+Angular Questions -
+
+1.angularjs custom directive properties , what is scope and restrict inside your directive
+
+Ans - 
+
+2. Difference among factory , services and providers?
+
+Ans - 
+
+3. what is config and run in angularjs. Why they used?
+
+Ans - 
+
+4. what is $watch and $apply in angularjs? Why they used?
+
+Ans - 
+
+5. Why we pass inside angular.module(“appName”,[]) ngRoute, ui.Router or ngAnimate etc inside [].
+
+Ans - 
+
+6. Can we use $scope as global variable or can we call $scope in another function?
+
+Ans - 
+
+7. What is dependency injection ? give one example.
+
+Ans - 
+
+8. What is Jsop ? How it’s different from Json?
+
+Ans - 
+
+9. Jquery  bind and on ?
+
+Ans - 
+
+10. What is callback function in jquery. Give one example ?
+
+Ans - 
+
+Jquery and js
+
+1.output of 
+function get(){
+var x;
+console.log(x);
+x = 10;
+}
+<button type="button"onclick="get()">show</button>
+
+Ans - undefined
+
+--------------------------------------------------------------------------------------------------------------------------------
+AGHAI GURU
+
+1.what is angularjs?
+Ans - Angularjs is a structural javascript framework for creating dynamic web apps or single page apps.
+
+2.dependency injection?
+Ans - dependency injection is a software design pattern that deals with how components get hold on their dependencies.
+E.g - 
+Var appModule = angular.module(“myApp”,[]);
+appModule.factory(“greeter”, function($window){
+Return{
+greet:function(text){
+$window.alert(text);
+};
+}
+});
+In the above example greeter is dependent on $window service.
+
+3.factory in angular?
+Ans - 
+
+4.controllers in angular?
+Ans - 
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+INFOSYS
+
+
+1. Angularjs - features of angularjs
+It is a javascript framework.
+It support clean MVC way.
+It is cross browser compliant.
+It is free licence.
+Some core features are - 
+Data-binding
+Scopes
+Services
+Controllers
+Directives
+Routing
+Mvc 
+Deep linking
+Dependency injection
+
+2. Angularjs use filter to format data -
+Currency, filter, json, date, uppercase, lowercase, limitTo, number, orderBy
+E.g -
+<h1>{{price | currency}}</h1>
+
+Var angular.module(‘myApp’,[]).controller(‘myCtrl’,function($scope){
+$scope.price = 50;
+});
+Output - $50
+
+3. $scope is an object that is accessible from current component like controller, services only but
+$rootscope can be accessible from everywhere in the application. It is parent of all $scope variables.
