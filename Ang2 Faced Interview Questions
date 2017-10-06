@@ -1,7 +1,5 @@
 IBM
 
-Angular Questions -
-
 1.angularjs custom directive properties , what is scope and restrict inside your directive
 
 Ans - app.directive(“sharedDirective”, function () {
