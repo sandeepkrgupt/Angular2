@@ -30,29 +30,10 @@ Ans -
 
 Ans - 
 
-8. What is Jsop ? How it’s different from Json?
+8. What is Jsonp ? How it’s different from Json?
 
 Ans - 
 
-9. Jquery  bind and on ?
-
-Ans - 
-
-10. What is callback function in jquery. Give one example ?
-
-Ans - 
-
-Jquery and js
-
-1.output of 
-function get(){
-var x;
-console.log(x);
-x = 10;
-}
-<button type="button"onclick="get()">show</button>
-
-Ans - undefined
 
 --------------------------------------------------------------------------------------------------------------------------------
 AGHAI GURU
