@@ -4,7 +4,17 @@ Angular Questions -
 
 1.angularjs custom directive properties , what is scope and restrict inside your directive
 
-Ans - 
+Ans - app.directive(“sharedDirective”, function () {
+    return {
+        restrict: “EA”,
+        scope: false,
+        template: “<div>directive scope value : {{name}}</div>”
+    };
+});
+in any application if we want specific functionality and we want to reuse it in whole appliaction module, then we need to develop
+a set of codes. AngularJs calls it Directive.
+
+**Reason to use restrict and scope in custom directive -
 
 2. Difference among factory , services and providers?
 
