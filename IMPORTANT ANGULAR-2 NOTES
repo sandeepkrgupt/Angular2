@@ -128,7 +128,7 @@ there are three types of directives -
 
 for using our own directive we need to do following -
 1. import {Directive, ElementRef, Renderer, HostListener} from '@angular/core';
-2. @Directive({selector : '[mycolor]'})
+2. @Directive({selector : '[directive_name]'}) // any name which will pass to our html page.
 3. export class directive_name {
 constructor(private ele : ElementRef, private rend : Renderer){
 
