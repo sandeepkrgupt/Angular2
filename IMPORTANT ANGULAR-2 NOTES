@@ -119,4 +119,31 @@ add(){
 }
 where 
 private newusr : any [] = [{}];  //  Empty Array , you can put some value if you want ...
+-------------------------------------------------------------------------------------------------------------------
+16. Directives -
+there are three types of directives -
+1. component - directive which has template.
+2. structural - these can change dom layout by adding and removing elements. like *ngIf, *ngFor etc..
+3. attribute - it changes behavoir of other component or direcives. it just like ng-show , ng-hide , ng-click etc, ang predefined 
+
+for using our own directive we need to do following -
+1. import {Directive, ElementRef, Renderer, HostListener} from '@angular/core';
+2. @Directive({selector : '[mycolor]'})
+3. export class directive_name {
+constructor(private ele : ElementRef, private rend : Renderer){
+
+}
+@HostListener('mouseover') mouseover(){
+	this.rend.setElementStyle(this.ele.nativeElement, 'color','red');
+}
+@HostListener('mouseout') mouseout(){
+	this.rend.setElementStyle(this.ele.nativeElement, 'color','green')
+}
+}
+4. In app.module -
+import {directive_name} from './directives/directive_name.directive.ts';
+inside declarations write directive_name
+
+
+
 
