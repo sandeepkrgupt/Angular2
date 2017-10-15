@@ -1,0 +1,24 @@
+<p MyColor>
+  directive-comp works!
+</p>
+<div mycolor>Hover Me!!</div>
+<br><br><br><br><br>
+
+<div appFontCngHover>Increase font on hover</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <h1>Calling mycol explicetly through directive as attribute</h1> -->
+[{{mycol}}]
+<div [appMyDirType2] = "mycol">Am Indian</div>
+
+<!--here appMyDirType2 is attribute directive 
+[appMyDirType2] = "mycol">Am Indian</div> here we are doing property binding
+Here we are binding property appMyDirType2 with myCol.
+here we have initialized myCol inside directive-copm.component.ts
+
+
+now as we are passing some value to the dir through property binding we have to collect
+this data with help of @input decorator.
+
+directive-comp is component directive - this is dir with template , inside this dir we
+are calling another dir that is myDirType2.
+-->
