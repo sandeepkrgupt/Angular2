@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 
 import {MyColor} from './directives/mycolor.directive';
 import { DirectiveCompComponent } from './directive-comp/directive-comp.component';
-import { FontCngHoverDirective } from './directives/font-cng-hover.directive';
 import { MyDirType2Directive } from './directives/my-dir-type2.directive';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { MyDirType2Directive } from './directives/my-dir-type2.directive';
     AppComponent,
     DirectiveCompComponent,
     MyColor,
-    FontCngHoverDirective,
     MyDirType2Directive
   ],
   imports: [
