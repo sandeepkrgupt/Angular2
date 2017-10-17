@@ -1,110 +1,17 @@
-IBM
+-----------------------------------------------------------------------
+Q1. Why we use Angular2 ? What is advantage of angular2 over Angular1?
+----------------------------------------------------------------------
+Q2. Do we use watch in angular2 , if no why?
+-----------------------------------------------------------------------
+Q3. Describe the Life cycle of Angular2 ?
+----------------------------------------------------------------------
+Q4. What are Promises in Angular2 ?
+----------------------------------------------------------------------
+Q5. What is the core concept of angular2 ?
+---------------------------------------------------------------------
+Q6. What is auto complete/ auto search in Angular2 ?
+---------------------------------------------------------------------
+Q7. What is Map in Angular2 ?
+---------------------------------------------------------------------
+Q8. What is Flip Flop in Angular2 ?
 
-1.angularjs custom directive properties , what is scope and restrict inside your directive
-
-Ans - app.directive(“sharedDirective”, function () {
-    return {
-        restrict: “EA”,
-        scope: false,
-        template: “<div>directive scope value : {{name}}</div>”
-    };
-});
-in any application if we want specific functionality and we want to reuse it in whole appliaction module, then we need to develop
-a set of codes. AngularJs calls it Directive.
-
-**Reason to use restrict and scope in custom directive -
-
-2. Difference among factory , services and providers?
-
-Ans - 
-
-3. what is config and run in angularjs. Why they used?
-
-Ans - 
-
-4. what is $watch and $apply in angularjs? Why they used?
-
-Ans - 
-
-5. Why we pass inside angular.module(“appName”,[]) ngRoute, ui.Router or ngAnimate etc inside [].
-
-Ans - 
-
-6. Can we use $scope as global variable or can we call $scope in another function?
-
-Ans - 
-
-7. What is dependency injection ? give one example.
-
-Ans - 
-
-8. What is Jsonp ? How it’s different from Json?
-
-Ans - 
-
-9. What is dirty checking ?
-
-Ans -
-
-10. what is Injectable, Why and when to use it ?
-
-Ans -
-
---------------------------------------------------------------------------------------------------------------------------------
-AGHAI GURU
-
-1.what is angularjs?
-Ans - Angularjs is a structural javascript framework for creating dynamic web apps or single page apps.
-
-2.dependency injection?
-Ans - dependency injection is a software design pattern that deals with how components get hold on their dependencies.
-E.g - 
-Var appModule = angular.module(“myApp”,[]);
-appModule.factory(“greeter”, function($window){
-Return{
-greet:function(text){
-$window.alert(text);
-};
-}
-});
-In the above example greeter is dependent on $window service.
-
-3.factory in angular?
-Ans - 
-
-4.controllers in angular?
-Ans - 
-
-
----------------------------------------------------------------------------------------------------------------------------------
-INFOSYS
-
-
-1. Angularjs - features of angularjs
-It is a javascript framework.
-It support clean MVC way.
-It is cross browser compliant.
-It is free licence.
-Some core features are - 
-Data-binding
-Scopes
-Services
-Controllers
-Directives
-Routing
-Mvc 
-Deep linking
-Dependency injection
-
-2. Angularjs use filter to format data -
-Currency, filter, json, date, uppercase, lowercase, limitTo, number, orderBy
-E.g -
-<h1>{{price | currency}}</h1>
-
-Var angular.module(‘myApp’,[]).controller(‘myCtrl’,function($scope){
-$scope.price = 50;
-});
-Output - $50
-
-3. $scope is an object that is accessible from current component like controller, services only but
-$rootscope can be accessible from everywhere in the application. It is parent of all $scope variables.
