@@ -147,6 +147,9 @@ constructor(private ele : ElementRef, private rend : Renderer){
 4. In app.module -
 import {directive_name} from './directives/directive_name.directive.ts';
 inside declarations write directive_name
+** HostListener vs HostBinding -
+HostBinding is used to add css style simply. Like - @HostBinding('style.backgroundColor') c_colorrr = "red"; 
+HostListener is used to add css on any event Like Above.
 --------------------------------------------------------------------------------------------------------------------------
 17. @Input() decorator is used to send data from parent to child component.
 import { Input } from '@angular/core';
