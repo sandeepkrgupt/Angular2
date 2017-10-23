@@ -203,7 +203,7 @@ renderer.listenGlobal('document', 'click', (event) => {
    inside our class -
     constructor(private tem : TemplateRef<any>, private container : ViewContainerRef) { }
     then,
-    @Input('appLoopDir') set check(n : Number){  // appLoopDir is our directive name.
+    @Input('appLoopDir') set check(n : Number){  // appLoopDir is our directive name.( You can give any func name inplaceof check.)
 	
 	for(let i=1; i<=n ; i++){
 	this.container.createEmbeddedView(this.tem);
