@@ -143,7 +143,55 @@ constructor(private ele : ElementRef, private rend : Renderer){
 4. In app.module -
 import {directive_name} from './directives/directive_name.directive.ts';
 inside declarations write directive_name
+--------------------------------------------------------------------------------------------------------------------------
+17. @Input() decorator is used to send data from parent to child component.
+import { Input } from '@angular/core';
 
+inside class
+@Input() variable_name : dataType ;
+--------------------------------------------------------------------------------------------------------------------------
+Directives are of 3 types - 
+1. Component Directive  like - <my-directive></my-directive>
+2. Structural Directive - <div *myDirective = "value"></div>
+3. Attribute Directive - <div myDirective></div> or <div [myDirective] = "value/variable"></div>
+
+In Attribute directive -
+for using events like click, mouse over , mouse out etc. we need to import
+import { ElementRef, Renderer, HostListener } from '@angular/core';
+and pass Elementef, Renderer inside constructor -
+constructor(private ele : ElementRef, private render : Renderer) {}
+and for mouseeover and out -
+@HostListener('mouseover') mouseover(){
+
+   this.render.setElementStyle(this.ele.nativeElement,'font-weight','bold');
+   }
+
+   @HostListener('mouseout') mouseout(){
+
+   this.render.setElementStyle(this.ele.nativeElement,'font-weight','normal');
+   }
+   -------------------------------------------------------------------------------------------------------------------------
+   2. Structural directives - this directive changes the complete HTML UI. For example if *ngFor is true then ui get changed
+   and false it also get some changes.
+   we can create our own str directive. steps -
+   import { TemplateRef, ViewContainerRef, Input } from '@angular/core';
+   
+   inside our class -
+    constructor(private tem : TemplateRef<any>, private container : ViewContainerRef) { }
+    then,
+    @Input('appLoopDir') set check(n : Number){  // appLoopDir is our directive name.
+	
+	for(let i=1; i<=n ; i++){
+	this.container.createEmbeddedView(this.tem);
+	}
+}
+
+calling our str directive -
+inside your component html file -
+<li *appLoopDir = "10">
+	am indian
+</li>
+it will show this 10 times.
 
 
 
