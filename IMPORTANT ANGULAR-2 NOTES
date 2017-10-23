@@ -170,7 +170,24 @@ and for mouseeover and out -
 
    this.render.setElementStyle(this.ele.nativeElement,'font-weight','normal');
    }
-   -------------------------------------------------------------------------------------------------------------------------
+   Note -
+   Renderer - You can use the Renderer Class to achieve dynamic event bindings. 
+   ** How to call events like mouseover and mouseout without using HostListner ?
+   Ans - There is another way -
+   constructor(elementRef: ElementRef, renderer: Renderer) {
+
+    // Listen to click events in the component
+    renderer.listen(elementRef.nativeElement, 'click', (event) => {
+      // Do something with 'event'
+    })
+);
+Here - listen is local for that component only.
+
+You can use listenGlobal that will give you access to document, body, etc.
+renderer.listenGlobal('document', 'click', (event) => {
+  // Do something with 'event'
+});
+-------------------------------------------------------------------------------------------------------------------------
    2. Structural directives - this directive changes the complete HTML UI. For example if *ngFor is true then ui get changed
    and false it also get some changes.
    we can create our own str directive. steps -
@@ -193,5 +210,9 @@ inside your component html file -
 </li>
 it will show this 10 times.
 
+Note -
+ViewContainerRef -  In Angular we usually manipulate the DOM using ViewContainerRef.
+createEmbeddedView - It's used to create a view using TemplateRef.
+TemplateRef - It is created by Angular compiler when it encounters ng-template tag in your component html.
 
 
