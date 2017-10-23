@@ -1,4 +1,8 @@
 MAIN NOTE -
+imports — the BrowserModule that this and every application needs to run in a browser.
+declarations — the application's lone component, which is also ...
+bootstrap — the root component that Angular creates and inserts into the index.html host web page.
+----------------------------------------------------------------------------------------------------------------
 Angular2, the core concepts are -
 components
 dependency injection
